@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @ComponentScan(basePackages = {"com.epam.spring.homework1.beans"})
-
 @Import(OtherConfig.class)
 public class BeansConfig {
 }
