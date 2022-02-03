@@ -17,7 +17,7 @@ public class AppConfigAnother {
 
     @Value("beanEbyDefault")
     private String beanEName;
-    @Value("15")
+    @Value("-1")
     private int beanEValue;
 
     @Value("beanFbyDefault")

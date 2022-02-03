@@ -20,9 +20,9 @@ public class MyBean implements Validatable {
     @Override
     public void validate() {
         if (name != null && !name.isEmpty() && value > 0) {
-            System.out.println("Bean " + name + "is valid");
+            System.out.println("Bean " + name + " is valid");
         } else {
-            System.out.println("Bean " + getClass().getSimpleName() + "is not valid");
+            System.out.println("Bean " + getClass().getSimpleName() + " is not valid");
         }
     }
 }
