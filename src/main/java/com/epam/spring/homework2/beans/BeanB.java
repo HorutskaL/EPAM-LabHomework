@@ -6,15 +6,15 @@ public class BeanB extends MyBean {
         super(name, value);
     }
 
-    private void customInitMethod() {
+    public void customInitMethod() {
         System.out.println("Inside " + name + " customInitMethod()");
     }
 
-    private void newCustomInitMethod() {
+    public void newCustomInitMethod() {
         System.out.println("Inside " + name + " newCustomInitMethod()");
     }
 
-    private void customDestroyMethod() {
+    public void customDestroyMethod() {
         System.out.println("Inside " + name + " customDestroyMethod()");
     }
 }

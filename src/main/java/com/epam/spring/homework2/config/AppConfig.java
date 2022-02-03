@@ -5,7 +5,6 @@ import com.epam.spring.homework2.beans.BeanC;
 import com.epam.spring.homework2.beans.BeanD;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
-import org.springframework.core.annotation.Order;
 
 @Configuration
 @PropertySource("my.properties")
@@ -28,19 +27,18 @@ public class AppConfig {
     private int beanCValue;
 
     @Bean(initMethod = "customInitMethod", destroyMethod = "customDestroyMethod")
-    @Order(1)
     public BeanD beanD() {
         return new BeanD(beanDName, beanDValue);
     }
 
     @Bean(initMethod = "customInitMethod", destroyMethod = "customDestroyMethod")
-    @Order(2)
+    @DependsOn("beanD")
     public BeanB beanB() {
         return new BeanB(beanBName, beanBValue);
     }
 
     @Bean(initMethod = "customInitMethod", destroyMethod = "customDestroyMethod")
-    @Order(3)
+    @DependsOn("beanB")
     public BeanC beanC() {
         return new BeanC(beanCName, beanCValue);
     }

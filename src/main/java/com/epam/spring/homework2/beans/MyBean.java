@@ -1,6 +1,6 @@
 package com.epam.spring.homework2.beans;
 
-public class MyBean implements MyValidator {
+public class MyBean implements Validatable {
     protected String name;
     protected int value;
 

@@ -10,12 +10,12 @@ public class BeanE extends MyBean {
     }
 
     @PostConstruct
-    private void customPostConstructMethod() {
+    public void customPostConstructMethod() {
         System.out.println("Inside " + name + " customPostConstructMethod()");
     }
 
     @PreDestroy
-    private void customPreDestroyMethod() {
+    public void customPreDestroyMethod() {
         System.out.println("Inside " + name + " customPreDestroyMethod()");
     }
 }
